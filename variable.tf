@@ -10,3 +10,23 @@ variable "rg_name" {
 variable "location" {
   type = string
 }
+
+variable "key_vault_name" {
+  type = string
+  
+}
+
+variable "rep_type" {
+  type = string
+  default = "LRS"
+}
+
+variable "environment" {
+  type = string
+  default = "dev"
+}
+
+variable "soft_delete_retention_days" {
+  type = number
+  default = 30
+}
