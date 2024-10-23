@@ -67,15 +67,15 @@ resource "azurerm_key_vault" "tfstate" {
     object_id = data.azurerm_client_config.current.object_id
 
     key_permissions = [
-      "Get",
+      "Update", "Get", "List",
     ]
 
     secret_permissions = [
-      "Get",
+      "Get", "List", "Set"
     ]
 
     storage_permissions = [
-      "Get",
+      "Get", "Set"
     ]
   }
 }
